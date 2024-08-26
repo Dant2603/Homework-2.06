@@ -78,7 +78,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="xQN-WF-zg6" id="Jw6-VB-xha"/>
                         <outlet property="passwordTF" destination="bhR-8C-3er" id="UaV-Ws-sQ3"/>
                         <outlet property="userNameTF" destination="KHW-eo-UMe" id="KNR-fd-ABT"/>
                     </connections>
@@ -113,7 +112,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ6-9B-21k">
-                                <rect key="frame" x="143" y="626" width="107.66666666666666" height="44"/>
+                                <rect key="frame" x="142.66666666666666" y="626" width="107.66666666666666" height="44"/>
                                 <color key="tintColor" red="0.88973832620000004" green="1" blue="0.88699874639999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
@@ -121,6 +120,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logoutButtonTapped:" destination="zpc-vr-YT5" eventType="touchUpInside" id="zWL-el-g6x"/>
+                                    <action selector="unwindFor:" destination="zpc-vr-YT5" eventType="touchUpInside" id="e9x-6O-eby"/>
                                 </connections>
                             </button>
                         </subviews>

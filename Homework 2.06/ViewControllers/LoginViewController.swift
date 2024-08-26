@@ -11,7 +11,6 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    @IBOutlet var loginButton: UIButton!
     
     let username = "admin"
     let password = "12345"
@@ -19,20 +18,22 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userNameTF.text = username
+        passwordTF.text = password
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowWelcomeScreen" {
             if let welcomeVC = segue.destination as? WelcomeViewController {
                 welcomeVC.username = userNameTF.text
             }
         }
-    }
+
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let usernameField = userNameTF.text ?? ""

@@ -22,5 +22,4 @@ final class WelcomeViewController: UIViewController {
     @IBAction func logoutButtonTapped(_ sender: Any) {
         dismiss(animated: true)
     }
-    
 }
